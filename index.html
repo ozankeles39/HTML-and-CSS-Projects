@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Recipes</title>
+    
+    <style>
+        /* TEMEL TASARIM (CSS) */
+        html {
+            scroll-behavior: smooth; /* Butona basınca yumuşakça kayması için */
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
+        header {
+            background-color: #ff6f61;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline-block;
+        }
+        nav ul li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+        }
+        nav ul li a:hover {
+            background-color: #555;
+        }
+        
+        /* BÖLÜM TASARIMLARI */
+        section {
+            padding: 60px 20px;
+        }
+        
+        /* HAKKIMIZDA (ABOUT) BÖLÜMÜ TASARIMI */
+        #about {
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        #about div {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* İLETİŞİM BÖLÜMÜ TASARIMI */
+        #contact {
+            text-align: center;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #ff6f61;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e65c50;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ÜST BİLGİ (HEADER) -->
+    <header>
+        <h1>Simple Recipes</h1>
+        <p>Your ultimate destination for easy-to-follow recipes.</p>
+    </header>
+
+    <!-- MENÜ (NAVBAR) -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#recipes">Recipes</a></li>
+            <!-- GÖREV 1: ABOUT BUTONU BURADA -->
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ANA SAYFA İÇERİĞİ -->
+    <section id="home">
+        <h2 style="text-align: center;">Welcome to our Kitchen!</h2>
+        <p style="text-align: center;">Explore delicious and simple recipes made for everyone.</p>
+    </section>
+
+    <!-- GÖREV 2: HAKKIMIZDA (ABOUT) BÖLÜMÜ BURADA -->
+    <section id="about">
+        <h2>About</h2>
+        <div>
+            <p>Simple Recipes is your ultimate destination for easy-to-follow recipes that make cooking enjoyable for everyone, whether you're a seasoned chef or a beginner. Founded in the United States out of a passion for home cooking, our mission is to inspire and empower you to create delicious meals with everyday ingredients and simple techniques.</p>
+            
+            <p>We offer a wide range of diverse cuisines, from classic comfort foods to international dishes, all accompanied by step-by-step instructions and helpful tips to ensure your cooking experience is smooth and successful. Our dedicated team of home cooks and food enthusiasts meticulously test each recipe, so you can cook with confidence.</p>
+            
+            <p>At Simple Recipes, we believe that good food brings people together, and we're excited to have you join our community. Let’s cook up something amazing together!</p>
+        </div>
+    </section>
+
+    <!-- İLETİŞİM (CONTACT) BÖLÜMÜ -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+</body>
+</html>
