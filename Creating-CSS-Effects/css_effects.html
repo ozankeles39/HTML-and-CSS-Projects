@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Effects Challenge</title>
+    
+    <!-- Task 1: Importing custom web font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Task 1: Applying the Google Font (Poppins) to the whole page */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        /* Basic styling for our image */
+        .my-cool-image {
+            width: 300px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin-top: 20px;
+            
+            /* 'transition' makes the effect smooth instead of instant */
+            transition: transform 0.5s ease, filter 0.5s ease;
+        }
+
+        /* Task 2: Customizing the image hover effect */
+        /* When the mouse hovers over the image, do this: */
+        .my-cool-image:hover {
+            /* Scale (make it 10% bigger) and Rotate (tilt it 5 degrees) */
+            transform: scale(1.1) rotate(5deg);
+            
+            /* Optional color change: make it slightly brighter */
+            filter: brightness(110%);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>My Awesome CSS Effects</h1>
+    <p>Hover your mouse over the image below to see the magic!</p>
+    
+    <!-- Daha guvenilir bir resim linki ile degistirdik -->
+    <img src="https://placehold.co/500x300/3498db/ffffff?text=Hover+Me!" alt="Hover me image" class="my-cool-image">
+
+</body>
+</html>
