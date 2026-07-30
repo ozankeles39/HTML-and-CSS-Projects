@@ -3,9 +3,11 @@ This repository contains the projects I have built during my HTML and CSS course
 
 Throughout this course, I have developed a strong foundation in front-end web development, gaining skills in:
 * Semantic HTML5 structuring
-* CSS3 styling and responsive web design
+* CSS3 styling, animations, and transitions
+* Responsive web design and Bootstrap grid systems
 * Version control using Git and GitHub
 
 Projects included in this repository:
-* **Academy Cinemas:** A responsive movie theater website.
-* **Personal Portfolio:** A custom-designed, responsive portfolio website.
+* **Basic HTML/CSS Pages:** Demonstrating fundamental web structures.
+* **Academy Cinemas:** A responsive movie theater website built with Bootstrap.
+* **Personal Portfolio:** A custom-designed, responsive portfolio website to showcase my skills.
