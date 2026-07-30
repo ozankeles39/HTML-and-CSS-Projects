@@ -2,166 +2,382 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<<<<<<< HEAD
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Recipes</title>
+    <title>My Portfolio</title>
     
+    <!-- Customization: Adding Google Fonts 'Poppins' for a modern look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <style>
-        /* TEMEL TASARIM (CSS) */
-        html {
-            scroll-behavior: smooth; /* Butona basınca yumuşakça kayması için */
-        }
-        body {
-            font-family: Arial, sans-serif;
+        /* 
+           =============================================
+           CUSTOM CSS STYLING
+           ============================================= 
+        */
+
+        /* General Reset & Basic Setup */
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            background-color: #fff;
-            color: #333;
-        }
-        header {
-            background-color: #ff6f61;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-        nav {
-            background-color: #333;
-        }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        nav ul li {
-            display: inline-block;
-        }
-        nav ul li a {
-            display: block;
-            color: white;
-            text-decoration: none;
-            padding: 14px 20px;
-        }
-        nav ul li a:hover {
-            background-color: #555;
-        }
-        
-        /* BÖLÜM TASARIMLARI */
-        section {
-            padding: 60px 20px;
-        }
-        
-        /* HAKKIMIZDA (ABOUT) BÖLÜMÜ TASARIMI */
-        #about {
-            background-color: #f9f9f9;
-            text-align: center;
-        }
-        #about div {
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.6;
+            scroll-behavior: smooth; /* Customization: Smooth scrolling for nav links */
         }
 
-        /* İLETİŞİM BÖLÜMÜ TASARIMI */
-        #contact {
-            text-align: center;
+        body {
+            font-family: 'Poppins', sans-serif; /* Customization: Using the imported font */
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
         }
+
+        /* 
+           ---------------------------------------------
+           NAVIGATION BAR
+           --------------------------------------------- 
+        */
+        nav {
+            background-color: #1a1a2e; /* Customization: Dark blue custom color */
+            position: fixed; /* Keeps nav at the top when scrolling */
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+        }
+
+        nav li {
+            margin: 0 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: color 0.3s ease, transform 0.3s ease; /* Customization: Transition for hover */
+        }
+
+        /* Customization: Hover effect on navigation links */
+        nav a:hover {
+            color: #e94560; /* Custom highlight color */
+            transform: translateY(-2px);
+            display: inline-block;
+        }
+
+        /* 
+           ---------------------------------------------
+           HEADER / HOME SECTION
+           --------------------------------------------- 
+        */
+        header {
+            background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
+            color: #fff;
+            text-align: center;
+            padding: 150px 20px 100px 20px;
+            border-bottom: 5px solid #e94560;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        header h2 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: #bdc3c7;
+        }
+
+        header p {
+            margin-top: 20px;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* 
+           ---------------------------------------------
+           MAIN LAYOUT & SECTIONS
+           --------------------------------------------- 
+        */
+        main {
+            padding-top: 40px;
+        }
+
+        section {
+            padding: 80px 20px;
+            max-width: 1100px;
+            margin: 0 auto 40px auto;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #1a1a2e;
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Customization: Small underline effect under section titles */
+        section h2::after {
+            content: '';
+            width: 50%;
+            height: 4px;
+            background-color: #e94560;
+            position: absolute;
+            bottom: -10px;
+            left: 25%;
+            border-radius: 2px;
+        }
+
+        /* 
+           ---------------------------------------------
+           ABOUT SECTION
+           --------------------------------------------- 
+        */
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap; /* Allows wrapping on smaller screens */
+            text-align: left;
+        }
+
+        .profile-pic {
+            border-radius: 50%;
+            border: 5px solid #e94560;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .about-text {
+            max-width: 500px;
+            font-size: 1.1rem;
+        }
+
+        /* 
+           ---------------------------------------------
+           PROJECTS (GITHUB) SECTION
+           --------------------------------------------- 
+        */
+        .project-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .project-card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            width: 45%; 
+            min-width: 300px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.4s ease, box-shadow 0.4s ease; /* Customization: Smooth hover transition */
+        }
+
+        /* Customization: Interactive Hover Effect on Project Cards */
+        .project-card:hover {
+            transform: translateY(-10px); 
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            background-color: #fff;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+
+        .github-btn {
+            display: inline-block;
+            margin-top: 40px;
+            background-color: #1a1a2e;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .github-btn:hover {
+            background-color: #e94560;
+        }
+
+        /* 
+           ---------------------------------------------
+           CONTACT FORM SECTION
+           --------------------------------------------- 
+        */
         form {
-            max-width: 400px;
+            max-width: 600px;
             margin: 0 auto;
             text-align: left;
         }
-        input, textarea {
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
             width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            margin-bottom: 15px;
-            box-sizing: border-box;
+            padding: 12px;
+            margin-bottom: 25px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            transition: border-color 0.3s;
         }
-        button {
-            background-color: #ff6f61;
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #e94560; /* Highlight border on focus */
+        }
+
+        input[type="submit"] {
+            background-color: #e94560;
             color: white;
-            padding: 10px 20px;
+            padding: 15px 20px;
             border: none;
+            border-radius: 8px;
             cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            width: 100%;
+            transition: background-color 0.3s, transform 0.2s;
         }
-        button:hover {
-            background-color: #e65c50;
+
+        input[type="submit"]:hover {
+            background-color: #d13d56;
+            transform: scale(1.02);
+        }
+
+        /* 
+           ---------------------------------------------
+           FOOTER
+           --------------------------------------------- 
+        */
+        footer {
+            background-color: #1a1a2e;
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
 
-    <!-- ÜST BİLGİ (HEADER) -->
-    <header>
-        <h1>Simple Recipes</h1>
-        <p>Your ultimate destination for easy-to-follow recipes.</p>
-    </header>
-
-    <!-- MENÜ (NAVBAR) -->
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#recipes">Recipes</a></li>
-            <!-- GÖREV 1: ABOUT BUTONU BURADA -->
             <li><a href="#about">About</a></li>
+            <li><a href="#projects">GitHub</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- ANA SAYFA İÇERİĞİ -->
-    <section id="home">
-        <h2 style="text-align: center;">Welcome to our Kitchen!</h2>
-        <p style="text-align: center;">Explore delicious and simple recipes made for everyone.</p>
-    </section>
+    <header id="home">
+        <h1>Hello, I'm Ozan Keles</h1>
+        <h2>Software Developer in Training</h2>
+        <p>Welcome to my personal portfolio. I am currently learning how to build modern, responsive, and beautiful websites.</p>
+    </header>
 
-    <!-- GÖREV 2: HAKKIMIZDA (ABOUT) BÖLÜMÜ BURADA -->
-    <section id="about">
-        <h2>About</h2>
-        <div>
-            <p>Simple Recipes is your ultimate destination for easy-to-follow recipes that make cooking enjoyable for everyone, whether you're a seasoned chef or a beginner. Founded in the United States out of a passion for home cooking, our mission is to inspire and empower you to create delicious meals with everyday ingredients and simple techniques.</p>
-            
-            <p>We offer a wide range of diverse cuisines, from classic comfort foods to international dishes, all accompanied by step-by-step instructions and helpful tips to ensure your cooking experience is smooth and successful. Our dedicated team of home cooks and food enthusiasts meticulously test each recipe, so you can cook with confidence.</p>
-            
-            <p>At Simple Recipes, we believe that good food brings people together, and we're excited to have you join our community. Let’s cook up something amazing together!</p>
-        </div>
-    </section>
-
-    <!-- İLETİŞİM (CONTACT) BÖLÜMÜ -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-
-            <button type="submit">Send</button>
-        </form>
-    </section>
-=======
-    <title>My Website</title>
-</head>
-<body>
-
-    <h1>Welcome to My Website</h1>
-    <p>This is my first HTML assignment.</p>
-
-    <h2>Contact Form</h2>
-    <form action="#">
-        Name: <br>
-        <input type="text" required> <br><br>
+    <main>
         
-        Message: <br>
-        <textarea rows="4" required></textarea> <br><br>
-        
-        <button type="submit">Submit</button>
-    </form>
->>>>>>> 0223a8feeb93f6992809ffbce0a5f0f0ff0b84d8
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <!-- Replace src with your own image link later -->
+                <img src="https://placehold.co/400x400/e94560/ffffff?text=Ozan+Keles" alt="Profile Picture" class="profile-pic">
+                
+                <div class="about-text">
+                    <p>Hello! I am a passionate aspiring software developer currently studying at Academy of Learning. I am building a strong foundation in full-stack development, starting with HTML, CSS, and JavaScript.</p>
+                    <br>
+                    <p>Before transitioning into tech, I worked in [Your Previous Field/Job], which taught me [A Skill like: problem-solving / teamwork / attention to detail]. When I'm not coding, you can find me [Your Hobby, e.g., reading sci-fi books, hiking, or playing video games].</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>My GitHub Projects</h2>
+            <p>Here are a few projects I have completed during my coursework:</p>
+            
+            <div class="project-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <!-- Placeholder image - you can replace with Pexels/Pixabay images -->
+                    <img src="https://placehold.co/600x400/1a1a2e/ffffff?text=HTML+Project" alt="HTML Project Thumbnail">
+                    <h3>Basic Webpage</h3>
+                    <p>A multi-page HTML and CSS website demonstrating proper semantic structure, linking, and image rendering.</p>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <img src="https://placehold.co/600x400/1a1a2e/ffffff?text=CSS+Effects" alt="CSS Project Thumbnail">
+                    <h3>Styling & Animation</h3>
+                    <p>An interactive project showcasing modern CSS techniques, including hover effects, transitions, and flexbox layouts.</p>
+                </div>
+            </div>
+            
+            <a href="https://github.com/ozankeles39" target="_blank" class="github-btn">View My GitHub Profile</a>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>I am currently open to new opportunities. Let's connect!</p>
+            
+            <!-- A basic form structure -->
+            <form action="mailto:reachtoozy@proton.me" method="POST" enctype="text/plain">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="How can I help you?" required></textarea>
+                
+                <input type="submit" value="Send Message">
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Ozan Keles. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
